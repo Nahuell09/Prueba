@@ -1,0 +1,98 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.item p {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.item {
+    background-color: #87cefa;
+    border: 1px black solid;
+}
+
+/* aplico las propiedades de grid */
+
+.gridpadre {
+    display: grid;
+
+    /* activo el sistema de grillas */
+
+
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    /* fr=fraccion */
+
+    column-gap: 10px;
+    row-gap: 10px;
+
+    /* justify-items = stard-end-center-stretch */
+    /* aling-items = stard-end-center-stretch */
+    align-items: center;
+
+
+    /* pisiciono todos los elementos */
+
+    /* justify-content=start-center-end-stretch */
+    /* aling-content=start-end-center-stretch */
+
+    height: 500px;
+    align-content: flex-start;
+
+
+}
+
+
+/* trabajamos con grid de area */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 200px 1fr auto 200px;
+    grid-template-rows: 100px 20rem 20rem 100px;
+    grid-template-areas: 
+    "nav header header header"
+    "nav sectiona sectiona aside"
+    "nav sectionb sectionb aside"
+    "nav footer footer footer";
+}
+
+
+header {
+    background-color: aliceblue;
+    grid-area: header;
+}
+
+
+nav {
+    background-color: aqua;
+    grid-area: nav;
+}
+
+.sectiona {
+    background-color: bisque;
+    grid-area: sectiona;
+}
+
+.sectionb {
+    background-color: blueviolet;
+    grid-area: sectionb;
+}
+
+aside {
+    background-color: red;
+    grid-area: aside;
+}
+
+
+footer {
+    background-color: #87cefa;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
